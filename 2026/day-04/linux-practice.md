@@ -111,9 +111,27 @@ ubuntu@ip-172-31-36-132:~$ grep devops /etc/group
 devops:x:1003:
 
 
-# milind tyroubleshooting 
+# milind troubleshooting 
 milind is not present as sudo group 
 
+groups milind
+ubuntu@ip-172-31-36-132:~$ sudo usermod -aG sudo milind
+ubuntu@ip-172-31-36-132:~$ groups milind
+milind : milind zanje sudo
+ubuntu@ip-172-31-36-132:~$ groups milind
+milind : milind zanje sudo
+ubuntu@ip-172-31-36-132:~$ groups sudo
+groups: 'sudo': no such user
+ubuntu@ip-172-31-36-132:~$ groups ubuntu
+ubuntu : ubuntu adm cdrom dip lxd docker
+# to refresh the added group : command :
+
+newgrp <service_name>
+
+ubuntu@ip-172-31-36-132:~$ newgrp docker
+ubuntu@ip-172-31-36-132:~$ sudo usermod -aG docker ubuntu
+ubuntu@ip-172-31-36-132:~$ groups ubuntu
+ubuntu : ubuntu adm cdrom dip lxd docker
 
 
 
