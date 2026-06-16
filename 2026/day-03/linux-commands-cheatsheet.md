@@ -1,4 +1,4 @@
-Process management
+# Process management
 
 top
 ps 
@@ -8,7 +8,7 @@ ps -ef | grep java
 
 
 
-File system
+# File system
 
 /bin : essentials users command binaries like cat , ls ,zcat , vi , 
 /boot : static files of bootloader , including Linx kernel (like vmlinux-7 * * )
@@ -28,7 +28,7 @@ File system
 /var : Variable data files such as system logs , spool dir ,
 
 
-Networking troubleshooting
+# Networking troubleshooting
 for networking trouble shooting
 commnads 
 ping to remote host
