@@ -1,9 +1,9 @@
-Process checks
+# Process checks = command 
 ps
 
 ps -ef | grep <service_name>
 
-Service checks
+# Service checks
 
 commands :
 systemctl status jenkins
@@ -16,7 +16,7 @@ systemctl disable jenkins
 
 systemctl list-units
 
-LOG checks :
+#  LOG checks :
 commands:
 
 journalctl -u <service_name>
@@ -31,13 +31,13 @@ Jun 13 19:04:43 ip-172-31-36-132 dockerd[2156]: time="2026-06-13T19:04:43.454814
 Jun 13 19:04:43 ip-172-31-36-132 dockerd[2156]: time="2026-06-13T19:04:43.514620565Z" level=info msg="Creating a containerd client" address=/run/containerd/containerd.sock timeout=1m0s
 
 
-2) 
+# 2) exapmle
 ubuntu@ip-172-31-36-132:~$ sudo journalctl -u docker | tail -f
 Jun 14 03:39:21 ip-172-31-36-132 dockerd[2682]: time="2026-06-14T03:39:21.970213789Z" level=info msg="image created" imageID="sha256:d7186bd20ef60b2bcc0c8fe9085b6e08940be77a7dd0c9e7705f23532c9caca0" tag="moby-dangling@sha256:d7186bd20ef60b2bcc0c8fe9085b6e08940be77a7dd0c9e7705f23532c9caca0"
 Jun 14 03:39:22 ip-172-31-36-132 dockerd[2682]: time="2026-06-14T03:39:22.412203835Z" level=info msg="image created" imageID="sha256:984173da34859805f9504200fb42123b62c1d102cb5d4c8fa3c7bba25ae7af19" tag="moby-dangling@sha256:984173da34859805f9504200fb42123b62c1d102cb5d4c8fa3c7bba25ae7af19"
 Jun 14 03:39:22 ip-172-31-36-132 dockerd[2682]: time="20
 
-4) grep command 
+# 4) grep command 
 buntu@ip-172-31-36-132:~$ grep milind  /etc/passwd 
 milind:x:1001:1002::/home/milind:/bin/sh
 
@@ -45,7 +45,7 @@ milind:x:1001:1002::/home/milind:/bin/sh
 buntu@ip-172-31-36-132:~$ grep milind  /etc/passwd 
 milind:x:1001:1002::/home/milind:/bin/sh
 
-tail command :
+# tail command :
 ubuntu@ip-172-31-36-132:~$ getent group | tail 
 tcpdump:x:985:
 landscape:x:106:
