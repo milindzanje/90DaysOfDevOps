@@ -1,7 +1,8 @@
-DAY -02:
-Linux fundamentals 
+# DAY -02:
+# Linux fundamentals 
 
-command to see the running process 
+# command to see the running process 
+
 ps -ef | grep <service_name>   OR ps aux | grep <servicae_name>
 for example 
 ps -ef | grep java
@@ -13,7 +14,7 @@ if need to kill the running process we , can use command
 
 kill -9 PID (forcefull deletion of running process)
 
-for the resource utilization we can use the below commnds 
+# for the resource utilization we can use the below commnds 
 
 top - we cvan see the running process in the server and zobmie process too , with priority of service and change to renice the value
 free -m - memory utilization  
