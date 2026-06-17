@@ -43,4 +43,49 @@ ip r l or ip addr show
 command to know the public ip of server 
 curl ifconfig.me
 
-  
+Reachability Test – Ping
+# ping google.com
+PING google.com (142.250.192.14) 56(84) bytes of data.
+64 bytes from 142.250.192.14: icmp_seq=1 ttl=118 time=15.2 ms
+64 bytes from 142.250.192.14: icmp_seq=2 ttl=118 time=14.8 ms
+64 bytes from 142.250.192.14: icmp_seq=3 ttl=118 time=15.1 ms
+
+--- google.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss
+
+# 2
+traceroute google.com
+1  192.168.1.1      1.2 ms
+2  10.10.0.1        5.1 ms
+3  172.16.5.10      8.2 ms
+4  142.250.192.14   15.4 ms
+
+
+* Number of hops
+* High latency hops
+* Timeouts
+
+
+ss -tulpn or netstat -tulnp | grep 8080(port address)
+verify whether the application is listening on the expected port using ss -tulpn
+
+# DNS resolution 
+use dig or nslookup to verify whether the hostname resolves to the correct IP address
+dig google.com or nslookup google.com
+
+
+# curl command 
+curl -I https://google.com
+
+o/p :
+HTTP/2 200
+content-type: text/html
+
+
+curl -I http://localhost:8080
+
+Output:
+
+HTTP/1.1 200 OK
+
+# netstat -an | head
